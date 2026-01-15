@@ -1,5 +1,14 @@
 /* --- CONFIGURACIÓN GENERAL --- */
 body {
+    /* ... mantén lo que ya tenías de background-color y font ... */
+    
+    /* MODIFICA ESTO: Cambiamos para que los elementos se apilen verticalmente */
+    display: flex;
+    flex-direction: column; /* Pone uno debajo del otro */
+    align-items: center;    /* Centra todo horizontalmente */
+    padding-top: 20px;      /* Un poco de aire arriba */
+}
+body {
     background-color: #f0f0f0; /* Fondo gris para la ventana del navegador */
     font-family: "Times New Roman", Times, serif; /* Fuente clásica obligatoria */
     font-size: 11pt; /* Tamaño estándar legible */
@@ -91,4 +100,41 @@ li {
     padding-left: 0;
     margin-left: -20px; /* Alineación especial para habilidades */
 }
-/* Prueba de cambio para Git */
+/* --- ESTILO DEL BOTÓN --- */
+.btn-download {
+    background-color: #333; /* Botón oscuro elegante */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Separación con la hoja */
+    font-family: sans-serif; /* Fuente moderna para la interfaz */
+    transition: background 0.3s;
+}
+
+.btn-download:hover {
+    background-color: #555; /* Cambio de color al pasar el mouse */
+}
+
+/* --- MAGIA PARA IMPRESIÓN (PDF) --- */
+@media print {
+    /* Ocultar el botón cuando se vaya a imprimir */
+    .no-print {
+        display: none !important;
+    }
+
+    /* Ajustes para que la hoja ocupe todo el PDF sin sombras raras */
+    body {
+        background-color: white;
+        padding: 0;
+    }
+    
+    .page {
+        box-shadow: none; /* Quitar la sombra 3D en el papel */
+        margin: 0;
+        border: none;
+        width: 100%;
+    }
+}
