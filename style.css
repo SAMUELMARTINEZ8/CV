@@ -1,0 +1,94 @@
+/* --- CONFIGURACIÓN GENERAL --- */
+body {
+    background-color: #f0f0f0; /* Fondo gris para la ventana del navegador */
+    font-family: "Times New Roman", Times, serif; /* Fuente clásica obligatoria */
+    font-size: 11pt; /* Tamaño estándar legible */
+    color: #000; /* Texto negro puro */
+    line-height: 1.3; /* Espaciado entre líneas para lectura cómoda */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* --- LA HOJA DE PAPEL --- */
+.page {
+    background-color: white;
+    width: 21cm; /* Ancho A4 estándar */
+    min-height: 29.7cm; /* Alto A4 estándar */
+    padding: 1.5cm 2cm; /* Márgenes generosos */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra suave para efecto 3D */
+    margin: 20px 0;
+    box-sizing: border-box; /* Para que el padding no deforme el ancho */
+}
+
+/* --- ENCABEZADO --- */
+header {
+    text-align: center; /* Centrar nombre y contacto */
+    margin-bottom: 20px;
+}
+
+.name {
+    text-transform: uppercase; /* Nombre en mayúsculas */
+    font-size: 20pt; /* Nombre grande */
+    margin: 0;
+    font-weight: bold;
+}
+
+.contact-info {
+    font-size: 10pt;
+    margin-top: 5px;
+}
+
+/* --- TÍTULOS DE SECCIÓN --- */
+.section-title {
+    font-size: 12pt;
+    text-transform: uppercase;
+    border-bottom: 1px solid black; /* La línea negra clásica debajo del título */
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding-bottom: 2px;
+}
+
+/* --- ESTRUCTURA DE CADA ENTRADA (TRABAJO/ESTUDIO) --- */
+.entry {
+    margin-bottom: 10px;
+}
+
+/* Flexbox para poner Título a la izquierda y Fecha a la derecha */
+.entry-header, .entry-subheader {
+    display: flex; 
+    justify-content: space-between; /* Empuja los elementos a los extremos */
+    width: 100%;
+}
+
+.institution {
+    font-weight: bold; /* Nombre de empresa/uni en negrita */
+    font-size: 12pt;
+}
+
+.degree {
+    font-style: italic; /* Cargo o título en cursiva */
+}
+
+.date {
+    text-align: right; /* Fechas alineadas a la derecha */
+}
+
+/* --- LISTAS (BULLET POINTS) --- */
+ul {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-left: 20px; /* Sangría para las viñetas */
+}
+
+li {
+    margin-bottom: 3px; /* Espacio entre cada logro */
+    text-align: justify; /* Texto justificado para bordes limpios */
+}
+
+.skills-list li {
+    list-style-type: none; /* Quitamos los puntos en la lista de habilidades */
+    padding-left: 0;
+    margin-left: -20px; /* Alineación especial para habilidades */
+}
+/* Prueba de cambio para Git */
