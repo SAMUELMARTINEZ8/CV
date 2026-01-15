@@ -16,4 +16,4 @@ Puedes visualizar el resultado final directamente en este enlace:
 * `style.css`: Define los estilos visuales (márgenes, fuentes, espaciados).
 
 ---
-*Desarrollado por Samuel Martinez Reyes*
+*Desarrollado por Samuel Martinez*
