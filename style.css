@@ -118,23 +118,59 @@ li {
     background-color: #555; /* Cambio de color al pasar el mouse */
 }
 
-/* --- MAGIA PARA IMPRESIÓN (PDF) --- */
+/* --- ESTILOS DEL BOTÓN DE DESCARGA --- */
+.btn-container {
+    text-align: center; /* Centrar el botón */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: sans-serif; /* Fuente moderna para la interfaz web */
+}
+
+.btn-download {
+    background-color: #2c3e50; /* Azul oscuro elegante */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px; /* Bordes redondos modernos */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #34495e; /* Color al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de elevación */
+    box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+}
+
+.hint {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* --- MAGIA DE IMPRESIÓN (Aquí se oculta todo) --- */
 @media print {
-    /* Ocultar el botón cuando se vaya a imprimir */
+    /* 1. Ocultar todo lo que tenga la clase 'no-print' */
     .no-print {
         display: none !important;
     }
 
-    /* Ajustes para que la hoja ocupe todo el PDF sin sombras raras */
+    /* 2. Ajustar la hoja para que ocupe todo el papel */
     body {
-        background-color: white;
+        background-color: white; /* Quitar el fondo gris */
+        margin: 0;
         padding: 0;
     }
-    
+
     .page {
-        box-shadow: none; /* Quitar la sombra 3D en el papel */
-        margin: 0;
+        box-shadow: none; /* Quitar la sombra 3D */
         border: none;
+        margin: 0;
         width: 100%;
+        max-width: none;
+        padding: 0; /* Ajustar márgenes para impresora */
     }
 }
